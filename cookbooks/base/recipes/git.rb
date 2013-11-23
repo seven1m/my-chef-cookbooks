@@ -5,7 +5,7 @@ end
 bash "setup_git_user" do
   not_if "git config --global user.name"
   code <<-EOH
-    git config --global user.name "Tim Morgan"
-    git config --global user.email "tim@timmorgan.org"
+    git config --global user.name "#{node.git.user.name}"
+    git config --global user.email "#{node.git.user.email}"
   EOH
 end
