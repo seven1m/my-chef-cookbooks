@@ -8,3 +8,9 @@ service('apache2') do
 end
 
 iptables_rule "http"
+
+bash "enable_rewrite" do
+  code <<-EOH
+    a2enmod rewrite
+  EOH
+end
