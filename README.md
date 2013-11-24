@@ -20,4 +20,7 @@ chef-solo -c solo.rb
 
 Installs a base system (Debian only at the moment) with:
 
-* TBD
+* iptables
+* shell tools: zsh, vim, git
+* ssh
+* apache
