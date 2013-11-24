@@ -6,7 +6,7 @@ end
 
 bash('configure_vim') do
   code <<-EOH
-    [[ ! -x ~/.vim ]] && git clone git://github.com/seven1m/vimfiles.git ~/.vim
+    [[ ! -e ~/.vim ]] && git clone git://github.com/seven1m/vimfiles.git ~/.vim
     cd ~/.vim
     git submodule update --init
     ln -s ~/.vim/vimrc ~/.vimrc
