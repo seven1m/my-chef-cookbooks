@@ -6,7 +6,7 @@
 vim /etc/hostname # set hostname
 vim /etc/hosts    # set fqdn
 aptitude update
-aptitude install -y ruby ruby-dev build-essental
+aptitude install -y ruby ruby-dev build-essential
 gem install --no-rdoc --no-ri chef ohai
 ```
 
