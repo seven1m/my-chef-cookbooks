@@ -8,6 +8,10 @@ vim /etc/hosts    # set fqdn
 aptitude update
 aptitude install -y ruby ruby-dev build-essential
 gem install --no-rdoc --no-ri chef ohai
+ssh-keygen
+cat ~/.ssh/id_rsa.pub # add key at https://github.com/settings/ssh
+git clone git@github.com:seven1m/my-chef-cookbooks.git chef
+cd chef
 ```
 
 ## Cookbooks
