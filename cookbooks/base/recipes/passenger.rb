@@ -9,7 +9,7 @@ end
 end
 
 bash('install_passenger') do
-  not_if "[[ -e /etc/apache2/conf.d/passenger ]]"
+  creates '/etc/apache2/conf.d/passenger'
   code <<-EOH
     passenger-install-apache2-module --auto
     passenger-install-apache2-module --snippet > /etc/apache2/conf.d/passenger
