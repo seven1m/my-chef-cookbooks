@@ -1,4 +1,4 @@
-%w(ruby ruby-dev libxml2-dev libxslt-dev libreadline-ruby libruby libopenssl-ruby build-essential).each do |pkg|
+%w(ruby ruby-dev libxml2-dev libxslt-dev libreadline-ruby libruby libopenssl-ruby build-essential libmysql-ruby).each do |pkg|
   package(pkg) do
     action :install
   end
