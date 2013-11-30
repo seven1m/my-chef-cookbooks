@@ -3,8 +3,8 @@
 ## Setup
 
 ```
-vim /etc/hostname # set hostname
-vim /etc/hosts    # set fqdn
+vi /etc/hostname # set hostname
+vi /etc/hosts    # set fqdn
 aptitude update
 aptitude install -y ruby ruby-dev build-essential
 gem install --no-rdoc --no-ri chef ohai
@@ -28,4 +28,4 @@ Installs a base system (Debian only at the moment) with:
 * iptables
 * shell tools: zsh, vim, git
 * ssh
-* apache
+* web stack: apache, mysql, php, ruby, passenger, nodejs
