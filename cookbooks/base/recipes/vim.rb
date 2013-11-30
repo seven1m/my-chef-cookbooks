@@ -4,6 +4,13 @@
   end
 end
 
+bash('symlink_ack') do
+  creates '/usr/local/bin/ack'
+  code <<-EOH
+    ln -s /usr/bin/ack-grep /usr/local/bin/ack
+  EOH
+end
+
 bash('configure_vim') do
   code <<-EOH
     [[ ! -e ~/.vim ]] && git clone git://github.com/seven1m/vimfiles.git ~/.vim
