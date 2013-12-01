@@ -17,11 +17,11 @@ git submodule update --init
 
 ## Cookbooks
 
+### Base
+
 ```
 chef-solo -c solo.rb
 ```
-
-### Base
 
 Installs a base system (Debian only at the moment) with:
 
@@ -29,3 +29,20 @@ Installs a base system (Debian only at the moment) with:
 * shell tools: zsh, vim, git
 * ssh
 * web stack: apache, mysql, php, ruby, passenger, nodejs
+
+### Mail
+
+```
+chef-solo -c solo.rb -o mail
+```
+
+Install Postfix, Dovecot, Spamassassin, and more.
+
+After running, be sure to:
+
+```
+vim /etc/postfix/virtual_domains
+vim /etc/postfix/virtual
+postmap /etc/postfix/virtual
+postfix reload
+```

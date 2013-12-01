@@ -1,0 +1,21 @@
+<?php
+
+$config = array();
+
+$config['db_dsnw'] = 'mysql://roundcube:roundcube@localhost/roundcubemail';
+$config['default_host'] = 'localhost';
+$config['smtp_server'] = 'localhost';
+$config['smtp_port'] = 25;
+$config['smtp_user'] = '%u';
+$config['smtp_pass'] = '%p';
+$config['default_folders'] = array('INBOX', 'Drafts', 'Sent', 'Junk', 'Trash');
+$config['create_default_folders'] = true;
+$config['protect_default_folders'] = true;
+$config['support_url'] = '';
+$config['product_name'] = 'Roundcube Webmail';
+$config['des_key'] = '<%= SecureRandom.hex(24)[0...24] %>';
+$config['plugins'] = array(
+    'archive',
+    'zipdownload',
+);
+$config['skin'] = 'larry';
