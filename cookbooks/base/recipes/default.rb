@@ -1,6 +1,7 @@
 include_recipe 'base::backports'
 include_recipe 'base::swap'
 include_recipe 'base::iptables'
+include_recipe 'base::timezone'
 include_recipe 'base::ssh'
 include_recipe 'base::zsh'
 include_recipe 'base::vim'
