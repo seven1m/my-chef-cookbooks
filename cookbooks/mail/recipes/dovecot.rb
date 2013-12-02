@@ -1,4 +1,4 @@
-%w(dovecot-imapd).each do |pkg|
+%w(dovecot-imapd dovecot-sieve dovecot-managesieved).each do |pkg|
   package(pkg) do
     action :install
   end

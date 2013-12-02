@@ -1,5 +1,6 @@
 remote_file('/tmp/roundcube.tgz') do
   source 'http://downloads.sourceforge.net/project/roundcubemail/roundcubemail-beta/1.0-beta/roundcubemail-1.0-beta.tar.gz?r=http%3A%2F%2Froundcube.net%2Fdownload%2F&ts=1385874116&use_mirror=softlayer-ams'
+  action :create_if_missing
 end
 
 bash('install_roundcube') do

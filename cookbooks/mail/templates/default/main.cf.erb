@@ -50,3 +50,4 @@ smtpd_tls_mandatory_protocols = SSLv3, TLSv1
 smtpd_tls_mandatory_ciphers = mediu
 smtpd_tls_auth_only = yes
 tls_random_source = dev:/dev/urandom
+mailbox_command = /usr/lib/dovecot/dovecot-lda -f "$SENDER" -a "$RECIPIENT"
