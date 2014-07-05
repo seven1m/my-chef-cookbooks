@@ -5,6 +5,6 @@ end
 bash 'install_npm' do
   creates '/usr/bin/npm'
   code <<-EOH
-    curl https://npmjs.org/install.sh | sh
+    curl https://www.npmjs.org/install.sh | clean=yes sh
   EOH
 end
