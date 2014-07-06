@@ -1,11 +1,11 @@
-%w(libxml2-dev libxslt-dev build-essential).each do |pkg|
+%w(libxml2-dev libxslt-dev libreadline-dev build-essential).each do |pkg|
   package(pkg) do
     action :install
   end
 end
 
 bash 'install_ruby' do
-  creates '/usr/bin/ruby'
+  creates '/usr/local/bin/ruby'
   code <<-EOH
     cd /tmp
     curl -O http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.2.tar.gz
