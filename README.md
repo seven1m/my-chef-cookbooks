@@ -6,7 +6,10 @@
 vi /etc/hostname # set hostname
 vi /etc/hosts    # set fqdn
 aptitude update
-aptitude install -y ruby ruby-dev build-essential
+aptitude install -y build-essential software-properties-common git
+apt-add-repository -y ppa:brightbox/ruby-ng
+apt-get update
+apt-get install -y ruby2.1 ruby2.1-dev
 gem install --no-rdoc --no-ri chef ohai
 ssh-keygen
 cat ~/.ssh/id_rsa.pub # add key at https://github.com/settings/ssh
