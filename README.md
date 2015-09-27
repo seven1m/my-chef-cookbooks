@@ -9,9 +9,7 @@ apt-get update
 apt-get install -y build-essential software-properties-common git
 apt-get install -y ruby ruby-dev
 gem install --no-rdoc --no-ri chef ohai
-ssh-keygen
-cat ~/.ssh/id_rsa.pub # add key at https://github.com/settings/ssh
-git clone git@github.com:seven1m/my-chef-cookbooks.git chef
+git clone https://github.com/seven1m/my-chef-cookbooks.git chef
 cd chef
 git submodule update --init
 ```
